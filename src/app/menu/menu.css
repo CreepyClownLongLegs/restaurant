@@ -1,0 +1,50 @@
+.menu-img-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--shadow-level-2);
+  height: 100%;
+}
+
+.menu-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.menu-img-card:hover .menu-img {
+  transform: scale(1.1);
+}
+
+.menu-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  color: white;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+
+.menu-card {
+  background: var(--color-surface-elevated);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--shadow-level-1);
+  transition: 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-level-2);
+}
+
+.container-fluid{
+    height : 40vh;
+}
+
+.overlay{
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.534);
+}

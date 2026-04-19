@@ -1,0 +1,215 @@
+<div class="container-fluid" style="background: url('../../assets/rusticBosnianRestaurant.jpg');">
+  <div class="container-fluid overlay" style="display: flex; justify-content: center; align-items: center; margin: 0px;">
+    <h1 class="hero-title-reservations" style="color: aliceblue;  text-align: center;">
+      MENU
+    </h1>
+  </div>
+</div>
+
+
+<div class="container py-5">
+
+  <!-- TITLE -->
+  <div class="text-center mb-5">
+    <h1 class="section-title">Our Menu</h1>
+    <p class="section-subtitle">Traditional flavors, modern comfort</p>
+  </div>
+
+  <!-- ===== MAIN DISHES (WITH IMAGES MIXED) ===== -->
+  <div class="mb-5">
+    <h2 class="section-title mb-4">Hauptgerichte</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4" *ngFor="let item of mains">
+
+        <!-- IMAGE CARD -->
+        <div *ngIf="item.image" class="menu-img-card h-100">
+          <img [src]="item.image" class="menu-img" />
+
+          <div class="menu-overlay">
+            <div class="d-flex justify-content-between">
+              <h5>{{item.name}}</h5>
+              <span>{{item.price}}€</span>
+            </div>
+            <p>{{item.desc}}</p>
+          </div>
+        </div>
+
+        <!-- NORMAL CARD -->
+        <div *ngIf="!item.image" class="menu-card p-4 h-100">
+          <div class="d-flex justify-content-between">
+            <h5>{{item.name}}</h5>
+            <span>{{item.price}}€</span>
+          </div>
+          <p class="text-muted">{{item.desc}}</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== DESSERTS (SAME IDEA) ===== -->
+  <div class="mb-5">
+    <h2 class="section-title mb-4">Desserts</h2>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let item of desserts">
+
+        <div *ngIf="item.image" class="menu-img-card h-100">
+          <img [src]="item.image" class="menu-img" />
+          <div class="menu-overlay">
+            <div class="d-flex justify-content-between">
+              <h5>{{item.name}}</h5>
+              <span>{{item.price}}€</span>
+            </div>
+            <p>{{item.desc}}</p>
+          </div>
+        </div>
+
+        <div *ngIf="!item.image" class="menu-card p-4 h-100">
+          <div class="d-flex justify-content-between">
+            <h5>{{item.name}}</h5>
+            <span>{{item.price}}€</span>
+          </div>
+          <p class="text-muted">{{item.desc}}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- ===== DRINKS (SAME IDEA) ===== -->
+  <div class="mb-5">
+    <h2 class="section-title mb-4">Drinks</h2>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let item of drinks">
+
+        <div *ngIf="item.image" class="menu-img-card h-100">
+          <img [src]="item.image" class="menu-img" />
+          <div class="menu-overlay">
+            <div class="d-flex justify-content-between">
+              <h5>{{item.name}}</h5>
+              <span>{{item.price}}€</span>
+            </div>
+            <p>{{item.desc}}</p>
+          </div>
+        </div>
+
+        <div *ngIf="!item.image" class="menu-card p-4 h-100">
+          <div class="d-flex justify-content-between">
+            <h5>{{item.name}}</h5>
+            <span>{{item.price}}€</span>
+          </div>
+          <p class="text-muted">{{item.desc}}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+      <!-- ===== SIDES (SAME IDEA) ===== -->
+  <div class="mb-5">
+    <h2 class="section-title mb-4">Drinks</h2>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let item of sides">
+
+        <div *ngIf="item.image" class="menu-img-card h-100">
+          <img [src]="item.image" class="menu-img" />
+          <div class="menu-overlay">
+            <div class="d-flex justify-content-between">
+              <h5>{{item.name}}</h5>
+              <span>{{item.price}}€</span>
+            </div>
+            <p>{{item.desc}}</p>
+          </div>
+        </div>
+
+        <div *ngIf="!item.image" class="menu-card p-4 h-100">
+          <div class="d-flex justify-content-between">
+            <h5>{{item.name}}</h5>
+            <span>{{item.price}}€</span>
+          </div>
+          <p class="text-muted">{{item.desc}}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+   <section class="intro-section ">
+    <div class="intro-container ">
+      <div class="intro-card reveal" #revealEl>
+        <div class="intro-badge"><span>Dobrodošli u Restoran</span></div>
+        <h2 class="section-title">
+          A Culinary Journey Through Traditional Sarajevo
+        </h2>
+        <div class="section-content  reveal" #RevealEl>
+          <p>
+            Restoran is more than just a restaurant; it&apos;s a sanctuary of
+            Bosnian heritage located on the main pedestrian street of Sarajevo.
+            We specialize in authentic traditional food, where every dish tells
+            a story of our cultural roots and family recipes passed down through
+            generations.
+          </p>
+          <p>
+            Whether you&apos;re a local seeking the comfort of home or a
+            traveler looking for the best place to eat in Sarajevo, our
+            non-smoking, baby-friendly environment offers a premium yet
+            authentic experience that captures the true spirit of Bosnia.
+          </p>
+        </div>
+        <div class="intro-geo-block">
+          <div class="geo-item">
+            <div class="geo-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                ></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span>Centar, Sarajevo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="reservations" class="final-cta-section">
+    <div class="cta-bg-overlay"></div>
+    <div class="cta-container">
+      <div class="cta-content">
+        <h2 class="section-title">Osjetite gostoprimstvo Sarajeva</h2>
+        <p class="section-subtitle">
+          Join us for an unforgettable dining experience where tradition meets
+          premium quality. Your table is waiting.
+        </p>
+        <div class="page-cta-actions">
+          <a routerLink="/reservation">
+            <div class="btn btn-primary btn-xl">
+              Rezerviši sto odmah
+            </div>
+          </a>
+          <p class="cta-note">
+            Ili nas posjetite direktno na Trgu fra Grge Martića
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+

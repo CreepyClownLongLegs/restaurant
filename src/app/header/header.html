@@ -1,0 +1,180 @@
+<div class="navigation-container1">
+  <nav
+    class="navigation-wrapper"
+    [class.scrolled]="isScrolled"
+  >
+    <div class="navigation-container">
+      <!-- LOGO -->
+        <div aria-label="Klopa Home" class="navigation-logo">
+          <div class="navigation-logo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" >
+              <path
+                d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589a5 5 0 0 0-9.186 0a4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1ZM6 17h12"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </div>
+          <span class="section-title navigation-brand-name">Restoran</span>
+        </div>
+
+      <!-- DESKTOP LINKS -->
+      <div class="navigation-desktop-links">
+        <a routerLink="/" style="text-decoration: none;" class="navigation-link playfair-display">
+          Home
+        </a>
+        <a routerLink="/menu"  style="text-decoration: none;" class="navigation-link playfair-display">
+          Menu
+        </a>
+        <a routerLink="/" fragment="location" style="text-decoration: none;" class="navigation-link playfair-display">
+          Location
+        </a>
+        <a routerLink="/" fragment="contact" style="text-decoration: none;" class="navigation-link playfair-display">
+          Contact
+        </a>
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="navigation-actions">
+        <a routerLink="/reservation">
+          <div class="btn btn-outline btn-sm navigation-cta-desktop">
+            <span>Book a Table</span>
+          </div>
+        </a>
+
+        <!-- MOBILE OPEN -->
+        <button
+          aria-label="Open Menu"
+          [attr.aria-expanded]="isMenuOpen"
+          class="navigation-mobile-toggle"
+          (click)="toggleMenu(true)"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M4 6h16M4 12h16M4 18h16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE OVERLAY -->
+  <div
+    class="navigation-mobile-overlay"
+    [class.active]="isMenuOpen"
+  >
+    <!-- HEADER -->
+    <div class="navigation-mobile-header">
+      <a routerLink="/" (click)="closeMenu()">
+        <div aria-label="Klopa Home" class="navigation-logo">
+          <div class="navigation-logo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" style="color: black;">
+              <path
+                d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589a5 5 0 0 0-9.186 0a4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1ZM6 17h12"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </div>
+          <span class="section-title navigation-brand-name" style="color: black;">Restoran</span>
+        </div>
+      </a>
+
+      <!-- CLOSE BUTTON -->
+      <button
+        aria-label="Close Menu"
+        class="navigation-mobile-close"
+        (click)="toggleMenu(false)"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="3" y="3" rx="2" width="18" height="18"></rect>
+            <path d="M9 16l3-3l3 3"></path>
+          </g>
+        </svg>
+      </button>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="navigation-mobile-content">
+      <div class="navigation-mobile-links">
+        <a routerLink="/" (click)="closeMenu()">
+          <div class="navigation-mobile-link"><span>Home</span></div>
+        </a>
+        <a routerLink="/menu" (click)="closeMenu()">
+          <div class="navigation-mobile-link"><span>Speisekarte</span></div>
+        </a>
+
+        <a href="#location" (click)="closeMenu()">
+          <div class="navigation-mobile-link"><span>Find Us</span></div>
+        </a>
+        <a href="#contact" (click)="closeMenu()">
+          <div class="navigation-mobile-link"><span>Contact</span></div>
+        </a>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="navigation-mobile-footer">
+        <a routerLink="/reservation" (click)="closeMenu()">
+          <div class="btn btn-lg btn-primary">
+            <span>Book Now</span>
+          </div>
+        </a>
+
+        <div class="navigation-social-row">
+          <!-- Instagram -->
+          <a href="#">
+            <div class="navigation-social-icon" aria-label="Instagram">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"></path>
+                  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0m7.5-4.5v.01"></path>
+                </g>
+              </svg>
+            </div>
+          </a>
+
+          <!-- Facebook -->
+          <a href="#">
+            <div class="navigation-social-icon" aria-label="Facebook">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
