@@ -1,8 +1,0 @@
-{
-  "routes": {
-    "/restaurant": {},
-    "/restaurant/contact": {},
-    "/restaurant/menu": {},
-    "/restaurant/reservation": {}
-  }
-}
