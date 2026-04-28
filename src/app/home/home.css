@@ -132,7 +132,7 @@
 .plate {
   position: absolute;
   left: 50%;
-  bottom: -200px;
+  bottom: -500px;
   transform: translateX(-50%);
   width: 800px;
   z-index: 5;
@@ -143,11 +143,14 @@
    transform: translateX(-50%) rotate(180deg) scale(1.02);
 }
 
+.plate-wrapper{
+  bottom: -200px;
+}
+
 
 .steam {
   position: absolute;
   left: 50%;
-  bottom: 28%;
   width: 130px;
   height: 280px;
   transform: translateX(-50%);
@@ -158,13 +161,11 @@
 .steam2 {
   animation-delay: 0.8s;
   transform: translateX( 50%);
-  bottom: 25%;
 }
 
 .steam3 {
   animation-delay: 1.6s;
   transform: translateX(-170%);
-    bottom: 25%;
 }
 
 #steamPath {
@@ -483,7 +484,7 @@
 
 @media (max-width: 768px) {
 .plate{
-  bottom: -420px;
+  bottom: -600px;
   transform:translateX(-50%) rotate(90deg);
 }
 
@@ -497,8 +498,14 @@
 }
 }
 
+@media(max-height: 907px) {
+  .plate{
+  bottom: -600px;
+  }
+}
+
 @media(max-height: 707px) {
   .plate{
-  bottom: -530px;
+  bottom: -800px;
   }
 }
