@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/',
+  basePath: '/restaurant',
   allowedHosts: [],
   supportedLocales: {
   "en-US": ""
