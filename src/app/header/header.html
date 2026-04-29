@@ -32,7 +32,7 @@
         <a routerLink="/" fragment="location" style="text-decoration: none;" class="navigation-link playfair-display">
           Location
         </a>
-        <a routerLink="/" fragment="contact" style="text-decoration: none;" class="navigation-link playfair-display">
+        <a routerLink="/contact" style="text-decoration: none;" class="navigation-link playfair-display">
           Contact
         </a>
       </div>
@@ -126,7 +126,7 @@
         <a href="#location" (click)="closeMenu()">
           <div class="navigation-mobile-link"><span>Find Us</span></div>
         </a>
-        <a href="#contact" (click)="closeMenu()">
+        <a routerLink="/contact" (click)="closeMenu()">
           <div class="navigation-mobile-link"><span>Contact</span></div>
         </a>
       </div>
