@@ -2676,7 +2676,7 @@ html {
   }
 
         .hero-title-reservations{
-    font-size: 5rem;
+    font-size: 7rem;
   }
 
   .notext{
@@ -2692,7 +2692,7 @@ html {
   }
 
         .hero-title-reservations{
-    font-size: 5rem;
+    font-size: 7rem;
   }
 }
  
@@ -2855,7 +2855,8 @@ html {
   }
 
   .page-hero-content{
-    margin-top: 200px;
+    margin-top: 100px;
+    height: max-content;
   }
 
     .page-hero-actions  .btn {
@@ -2867,7 +2868,7 @@ html {
   }
 
       .hero-title-reservations{
-    font-size: 2.2rem;
+    font-size: 3.2rem;
   }
 }
  
@@ -3069,13 +3070,86 @@ html {
 }
 
 
+@media(max-height:1100px) {
+  .hero-container{
+    margin-top: -200px;
+  }
+
+   .hero-title{
+    font-size: 6rem;
+  }
+
+    .hero-title-reservations{
+    font-size: 5rem;
+  }
+}
+
+@media(max-height:1000px) {
+      .hero-title{
+    font-size: 4rem;
+  }
+
+        .hero-title-reservations{
+    font-size: 4rem;
+  }
+
+}
+
+@media(max-height:900px) {
+      .hero-title{
+    font-size: 4rem;
+  }
+
+        .hero-title-reservations{
+    font-size: 4rem;
+  }
+
+  .notext{
+    display: none;
+  }
+
+}
+
+@media(max-height:800px) {
+      .hero-title{
+    font-size: 3.5rem;
+  }
+
+        .hero-title-reservations{
+    font-size: 3rem;
+  }
+
+  .notext{
+    display: none;
+  }
+
+    .hero-container{
+    margin-top: -200px;
+  }
+
+  .plate{
+    bottom: -450px;
+  }
+}
+
 @media(max-height:700px) {
+      .hero-container{
+    margin-top: -100px;
+  }
+
+  .plate{
+    bottom: -550px;
+  }
+}
+
+
+@media(max-height:500px) {
       .hero-title{
     font-size: 3rem;
   }
 
         .hero-title-reservations{
-    font-size: 0.9rem;
+    font-size: 3rem;
   }
 
   .notext{
@@ -3087,6 +3161,6 @@ html {
   }
 
   .plate{
-    bottom: -500px;
+    bottom: -560px;
   }
 }

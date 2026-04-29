@@ -39,7 +39,6 @@ ngAfterViewInit() {
   }, 500);
 
   new Swiper('.swiper', {
-    modules: [Autoplay],
     loop: true,
     slidesPerView: 2,
 

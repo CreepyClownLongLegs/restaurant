@@ -6,16 +6,15 @@
     display: flex; align-items: center;filter: brightness(0.85) contrast(1.1) saturate(1.1);
      image-rendering: -webkit-optimize-contrast; height: 60vh;">
     
-    <div class="hero-container" style="width: 100%; 
-      background: linear-gradient(
+    <div class="hero-container" style="width: 100%; position: relative;" >
+      <div class="page-hero-content reveal" #revealEl style="      background: linear-gradient(
     to right,
     transparent,
     rgba(0,0,0,0.6),
     rgba(0,0,0,0.6),
     transparent
-  ); position: relative;" >
-      <div class="page-hero-content reveal" #revealEl> 
-        <div class="hero-ornament"  style="margin: 0; margin-top: -5px;">
+  );"> 
+        <div class="hero-ornament"  style="margin: 5px;">
         <div class="ornament-line"></div>
         <div class="ornament-diamond"></div>
         <div class="ornament-line"></div>
@@ -29,7 +28,7 @@
           Experience the soul of Sarajevo through traditional recipes, warm
           hospitality.
         </p>
-        <div class="page-hero-actions">
+        <div class="page-hero-actions meni-btn">
           <a routerLink="/reservation" class="meni-btn btn btn-primary btn-lg">
             Rezerviši sto
           </a>
@@ -37,13 +36,14 @@
             Pogledaj Meni
           </a>
         </div>
-      </div>
-      <div class="hero-ornament" style="margin-top: 20px; margin-bottom: -5px;">
+
+              <div class="hero-ornament" >
         <div class="ornament-line"></div>
         <div class="ornament-diamond"></div>
         <div class="ornament-line"></div>
       </div>
     </div>
+      </div>
 
     <div class="plate-wrapper">
     <svg class="steam" viewBox="0 0 100 300">
@@ -70,9 +70,9 @@
   />
 </svg>
     
-    <img class="plate"
-     src="/assets/tradFood.png"
-     alt="tradFood" alt="tradFood" >
+    <img 
+     src="assets/tradFood.png"
+     alt="tradFood" class="plate">
 
      </div>
 

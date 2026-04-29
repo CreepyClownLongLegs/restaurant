@@ -132,7 +132,7 @@
 .plate {
   position: absolute;
   left: 50%;
-  bottom: -200px;
+  bottom: -400px;
   transform: translateX(-50%);
   width: 800px;
   z-index: 5;
@@ -481,9 +481,15 @@
   transform: translateX(0);
 }
 
+@media (max-width: 1000px) {
+  .meni-btn{
+  display: none;
+
+}
+}
+
 @media (max-width: 768px) {
 .plate{
-  bottom: -420px;
   transform:translateX(-50%) rotate(90deg);
 }
 
@@ -495,10 +501,24 @@
   display: none;
 
 }
+
+
+
+}
+
+@media(max-height: 1000px) {
+  .plate{
+  bottom: -480px;
+  }
+
+  .plate:hover {
+   transform: none;
+}
+
 }
 
 @media(max-height: 707px) {
   .plate{
-  bottom: -530px;
+  bottom: -600px;
   }
 }
